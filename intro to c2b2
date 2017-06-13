@@ -1,0 +1,22 @@
+# useful sites
+https://wiki.c2b2.columbia.edu/systems/index.php/Documentation/HPC_cluster
+
+# ssh
+ssh -X jep2111@login.c2b2.columbia.edu
+Psnr1051!@#
+
+# prerequisite
+https://support.apple.com/en-us/HT201341
+
+# interactive job
+qsh -l mem=3g
+
+# directory structre
+home folder >> /ifs/home/msph/epi/jep2111
+scrath folder >> /ifs/scratch/pimri/posnerlab
+"main data folder" >> /ifs/scratch/pimri/posnerlab/1anal
+
+# transfering data
+rsync -ahze ssh jep2111@login.c2b2.columbia.edu:/ifs/scratch/pimri/posnerlab/1anal/highrisk/data/10398 "current local folder"
+
+# mrtrix3
