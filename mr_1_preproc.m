@@ -1,4 +1,4 @@
-function monk_mrtrix_1_preproc(order)
+function HighRisk_mrtrix_1_preproc(order)
 %% reset LD_LIBRARY_PATH
 LD_LIBRARY_PATH=['/nfs/apps/gcc/4.9.2/lib64'];
 %/home/juke/MATLAB/R2016b/sys/os/glnxa64:
@@ -6,9 +6,9 @@ LD_LIBRARY_PATH=['/nfs/apps/gcc/4.9.2/lib64'];
 setenv('LD_LIBRARY_PATH', LD_LIBRARY_PATH)
 !echo $LD_LIBRARY_PATH
 
-parentdir='/ifs/scratch/pimri/posnerlab/1anal/Monk/data';
+parentdir='/ifs/scratch/pimri/posnerlab/1anal/highrisk/data';
 
-[num,txt,raw] = xlsread(fullfile(parentdir,'list_good_dwi.xls'));
+[num,txt,raw] = xlsread(fullfile(parentdir,'subjectlist.xls.xls'));
 
 disp(['NOW PROCESSING ORDER ' int2str(order)])
 s=num(order+1,2)
@@ -29,7 +29,7 @@ cd(workingdir)
 
 %% 1. setup %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-cd('DTI')
+cd('diffusion_1')
 dwiname=txt(order+1,3)
 cmd=['find . -maxdepth 1 -name "' dwiname{1} '"'] 
 [status, out]=system(cmd)
