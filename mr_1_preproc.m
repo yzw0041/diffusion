@@ -8,7 +8,7 @@ setenv('LD_LIBRARY_PATH', LD_LIBRARY_PATH)
 
 parentdir='/ifs/scratch/pimri/posnerlab/1anal/highrisk/data';
 
-[num,txt,raw] = xlsread(fullfile(parentdir,'subjectlist.xls.xls'));
+[num,txt,raw] = xlsread(fullfile(parentdir,'subjectlist.xls'));
 
 disp(['NOW PROCESSING ORDER ' int2str(order)])
 s=num(order+1,2)
